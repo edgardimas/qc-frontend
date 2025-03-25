@@ -2,17 +2,16 @@
     import LowerHeader from '@/components/molecules/LowerHeader.vue';
     import UpperHeader from '@/components/molecules/UpperHeader.vue';
 
-    defineProps({
-        title: {
-            type: String,
-            required: true,
-        },
-    })
+    defineProps<{
+        title: string,
+        userName: string
+    }>()
+
 </script>
 
 <template>
-    <div>
+    <div class="shadow-xl">
         <UpperHeader :title=title />
-        <LowerHeader />
+        <LowerHeader :userName="userName" />
     </div>
 </template>
