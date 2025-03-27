@@ -1,24 +1,25 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomePage from '../views/HomePage.vue'
-import FormPage from '../views/FormPage.vue'
+import FormQcPage from '@/components/templates/FormQcPage.vue'
+import ViewQcPage from '@/components/templates/ViewQcPage.vue'
 
 const router = createRouter({
 	history: createWebHistory(import.meta.env.BASE_URL),
-	routes: [
-	{
-		path: '/',
-		name: 'home',
-		component: HomePage,
-	},
-	// {
-	//   path: '/about',
-	//   name: 'about',
-	//   // route level code-splitticd ng
-	//   // this generates a separate chunk (About.[hash].js) for this route
-	//   // which is lazy-loaded when the route is visited.
-	//   component: () => import('../views/AboutView.vue'),
-	// },
-	],
+    routes: [
+		{
+			path: '/',
+			redirect: '/qc'  // Add this redirect
+		},
+		{
+			path: '/qc',
+			name: 'viewqc',
+			component: ViewQcPage,
+		},
+		{
+			path: '/qc/new',
+			name: 'formqc',
+			component: FormQcPage,
+		},
+	]
 })
 
 export default router

@@ -2,14 +2,13 @@
 	// import { RouterLink, RouterView } from 'vue-router'
 	// import NavBar from '@/components/NavBar.vue'
 	// import HomePage from '@/views/HomePage.vue'
-	import ViewQCPage from '@/components/templates/ViewQcPage.vue'
-	import ComboBox from '@/components/atoms/ComboBox.vue';
+	import { RouterView } from 'vue-router'
+	// import FormQCPage from '@/components/templates/FormQcPage.vue'
+	// import ViewQcPage from '@/components/templates/ViewQcPage.vue'
 </script>
 
 <template>
 	<div class="mx-auto min-w-full">
-		<!-- <NavBar />
-		<HomePage /> -->
-		<ViewQCPage />
+		<RouterView />
 	</div>
 </template>
