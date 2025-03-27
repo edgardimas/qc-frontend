@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="bg-red-50 py-1 w-full rounded-lg">
+    <button class="bg-red-50 py-1 w-full rounded-lg" type="button">
         <Add role="button" class="cursor-pointer">Add Test</Add>
-    </div>
+    </button>
 </template>
